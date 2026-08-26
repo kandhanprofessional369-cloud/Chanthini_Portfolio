@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 import {
   FaGithub,
@@ -10,28 +11,68 @@ import {
 
 import "./App.css";
 
+import profileImage from "./assets/profile.jpg";
+import guviCertificate from "./assets/guvi-certificate.png";
+
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div>
-      {/* Navbar */}
+      {/* =========================
+          NAVBAR
+      ========================= */}
       <nav className="navbar">
         <div className="nav-container">
-          <a href="#home" className="logo">
+          <a
+            href="#home"
+            className="logo"
+            onClick={() => setMenuOpen(false)}
+          >
             CM.
           </a>
 
-          <div className="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#contact">Contact</a>
+          <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+            <a href="#home" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
+
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+
+            <a href="#skills" onClick={() => setMenuOpen(false)}>
+              Skills
+            </a>
+
+            <a href="#projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+
+            <a href="#certifications" onClick={() => setMenuOpen(false)}>
+              Certifications
+            </a>
+
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+          >
+            ☰
+          </button>
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* =========================
+          HERO
+      ========================= */}
       <section id="home" className="hero">
         <div className="hero-content">
           <p className="hero-small">Hello, I'm</p>
@@ -42,29 +83,29 @@ function App() {
 
           <h2>Full Stack Developer | MERN Stack Developer</h2>
 
-<p className="hero-description">
-  I'm a passionate Full Stack Developer with hands-on experience
-  building web applications using the MERN stack. I enjoy learning
-  new technologies and building practical web applications.
-</p>
+          <p className="hero-description">
+            I'm a passionate Full Stack Developer with hands-on experience
+            building web applications using the MERN stack. I enjoy learning
+            new technologies and building practical web applications.
+          </p>
 
           <div className="hero-buttons">
-  <a href="#projects" className="btn primary-btn">
-    View My Work
-  </a>
+            <a href="#projects" className="btn primary-btn">
+              View My Work
+            </a>
 
-  <a href="#contact" className="btn secondary-btn">
-    Contact Me
-  </a>
+            <a href="#contact" className="btn secondary-btn">
+              Contact Me
+            </a>
 
-  <a
-    href="/Chanthini_Mai_TV_Resume.pdf"
-    download
-    className="btn secondary-btn"
-  >
-    Download Resume
-  </a>
-</div>
+            <a
+              href="/Chanthini_Mai_TV_Resume.pdf"
+              download
+              className="btn secondary-btn"
+            >
+              Download Resume
+            </a>
+          </div>
 
           <div className="social-links">
             <a
@@ -94,6 +135,7 @@ function App() {
           </div>
         </div>
 
+        {/* Code Card */}
         <div className="hero-card">
           <div className="code-card">
             <div className="code-header">
@@ -138,7 +180,9 @@ function App() {
         </a>
       </section>
 
-      {/* About */}
+      {/* =========================
+          ABOUT
+      ========================= */}
       <section id="about" className="section">
         <div className="section-heading">
           <p>GET TO KNOW ME</p>
@@ -146,25 +190,31 @@ function App() {
         </div>
 
         <div className="about-content">
+          <div className="about-image">
+            <img src={profileImage} alt="Chanthini Mai T V" />
+          </div>
+
           <div className="about-text">
-  <h3>Full Stack Developer</h3>
+            <h3>Full Stack Developer</h3>
 
-  <p>
-    I'm a Full Stack Developer with hands-on experience building
-    responsive and user-friendly web applications using the MERN stack.
-  </p>
+            <p>
+              I'm a Full Stack Developer with hands-on experience building
+              responsive and user-friendly web applications using the MERN
+              stack.
+            </p>
 
-  <p>
-    I enjoy developing complete applications across the frontend,
-    backend, and database layers, including REST APIs, authentication,
-    and MongoDB integration.
-  </p>
+            <p>
+              I enjoy developing complete applications across the frontend,
+              backend, and database layers, including REST APIs,
+              authentication, and MongoDB integration.
+            </p>
 
-  <p>
-    I'm continuously improving my problem-solving skills and exploring
-    new technologies to build practical and scalable web solutions.
-  </p>
-</div>
+            <p>
+              I'm continuously improving my problem-solving skills and
+              exploring new technologies to build practical and scalable web
+              solutions.
+            </p>
+          </div>
 
           <div className="about-info">
             <div>
@@ -190,7 +240,9 @@ function App() {
         </div>
       </section>
 
-      {/* Skills */}
+      {/* =========================
+          SKILLS
+      ========================= */}
       <section id="skills" className="section skills-section">
         <div className="section-heading">
           <p>WHAT I WORK WITH</p>
@@ -200,40 +252,54 @@ function App() {
         <div className="skills-grid">
           <div className="skill-card">
             <h3>Frontend</h3>
-            <p>HTML5</p>
-            <p>CSS3</p>
-            <p>JavaScript</p>
-            <p>React.js</p>
-            <p>Bootstrap</p>
+
+            <div className="skill-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>React.js</span>
+              <span>Bootstrap</span>
+            </div>
           </div>
 
           <div className="skill-card">
             <h3>Backend</h3>
-            <p>Node.js</p>
-            <p>Express.js</p>
-            <p>REST APIs</p>
-            <p>JWT Authentication</p>
+
+            <div className="skill-tags">
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>REST APIs</span>
+              <span>JWT Authentication</span>
+            </div>
           </div>
 
           <div className="skill-card">
             <h3>Database</h3>
-            <p>MongoDB</p>
-            <p>Mongoose</p>
-            <p>MongoDB Atlas</p>
+
+            <div className="skill-tags">
+              <span>MongoDB</span>
+              <span>Mongoose</span>
+              <span>MongoDB Atlas</span>
+            </div>
           </div>
 
           <div className="skill-card">
             <h3>Tools & Development</h3>
-            <p>Git</p>
-            <p>GitHub</p>
-            <p>Postman</p>
-            <p>VS Code</p>
-            <p>Vercel / Render</p>
+
+            <div className="skill-tags">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Postman</span>
+              <span>VS Code</span>
+              <span>Vercel / Render</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Projects */}
+      {/* =========================
+          PROJECTS
+      ========================= */}
       <section id="projects" className="section">
         <div className="section-heading">
           <p>MY RECENT WORK</p>
@@ -361,30 +427,46 @@ function App() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section id="certifications" className="section certifications">
+      {/* =========================
+          CERTIFICATIONS
+      ========================= */}
+      <section
+        id="certifications"
+        className="section certifications"
+      >
         <div className="section-heading">
           <p>MY LEARNING JOURNEY</p>
           <h2>Certifications</h2>
         </div>
 
         <div className="cert-card">
-  <h3>Full Stack Development</h3>
+          <h3>Full Stack Development</h3>
 
-  <p>
-    <strong>GUVI</strong> • Full Stack Developer Program
-  </p>
+          <p>
+            <strong>GUVI</strong> • Full Stack Developer Program
+          </p>
 
-  <span>MERN Stack</span>
+          <span>MERN Stack</span>
 
-  <p className="cert-skills">
-    Frontend Development • Backend Development • REST APIs • MongoDB •
-    Authentication
-  </p>
-</div>
+          <p className="cert-skills">
+            Frontend Development • Backend Development • REST APIs •
+            MongoDB • Authentication
+          </p>
+
+          <a
+            href={guviCertificate}
+            target="_blank"
+            rel="noreferrer"
+            className="cert-link"
+          >
+            View Certificate
+          </a>
+        </div>
       </section>
 
-      {/* Contact */}
+      {/* =========================
+          CONTACT
+      ========================= */}
       <section id="contact" className="section contact-section">
         <div className="section-heading">
           <p>LET'S CONNECT</p>
@@ -392,21 +474,21 @@ function App() {
         </div>
 
         <div className="contact-content">
-        <p>
-  I'm open to full-time opportunities, collaborations, and interesting
-  projects. Feel free to reach out if you'd like to connect or discuss
-  an opportunity.
-</p>
+          <p>
+            I'm open to full-time opportunities, collaborations, and
+            interesting projects. Feel free to reach out if you'd like to
+            connect or discuss an opportunity.
+          </p>
 
           <div className="contact-links">
             <a href="mailto:kandhanprofessional369@gmail.com">
               <FaEnvelope />
-              kandhanprofessional369@gmail.com
+              <span>kandhanprofessional369@gmail.com</span>
             </a>
 
             <a href="tel:+919042758369">
               <FaPhone />
-              +91 90427 58369
+              <span>+91 90427 58369</span>
             </a>
           </div>
 
@@ -432,10 +514,13 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* =========================
+          FOOTER
+      ========================= */}
       <footer>
         <p>
-          © {new Date().getFullYear()} Chanthini Mai T V. All rights reserved.
+          © {new Date().getFullYear()} Chanthini Mai T V. All rights
+          reserved.
         </p>
       </footer>
     </div>
@@ -443,5 +528,3 @@ function App() {
 }
 
 export default App;
-
-
