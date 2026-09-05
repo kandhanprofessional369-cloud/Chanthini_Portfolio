@@ -13,14 +13,12 @@ html {
   scroll-padding-top: 75px;
 }
 
-#experience {
-  scroll-margin-top: 85px;
-}
-
-#education {
-  scroll-margin-top: 85px;
-}
-
+#about,
+#skills,
+#projects,
+#experience,
+#certifications,
+#education,
 #contact {
   scroll-margin-top: 85px;
 }
@@ -1591,7 +1589,6 @@ footer p {
   }
 }
 
-
 /* =========================
    SMALL MOBILE
 ========================= */
@@ -1600,7 +1597,6 @@ footer p {
 
   .nav-container {
     height: 70px;
-
     padding: 0 20px;
   }
 
@@ -1617,14 +1613,23 @@ footer p {
   }
 
 
-  /* HERO */
+  /* =========================
+     HERO - MOBILE
+  ========================= */
 
   .hero {
-    padding: 105px 20px 70px;
+    min-height: auto;
+
+    padding: 105px 20px 55px;
+
+    gap: 45px;
+
+    justify-content: flex-start;
   }
 
   .hero-small {
     font-size: 15px;
+    margin-bottom: 12px;
   }
 
   .hero h1 {
@@ -1633,12 +1638,16 @@ footer p {
     letter-spacing: -1.5px;
 
     line-height: 1.1;
+
+    margin-bottom: 15px;
   }
 
   .hero h2 {
     font-size: 21px;
 
     line-height: 1.45;
+
+    margin-bottom: 15px;
   }
 
   .hero-description {
@@ -1651,10 +1660,18 @@ footer p {
     flex-direction: column;
 
     width: 100%;
+
+    margin-top: 25px;
+
+    gap: 12px;
   }
 
   .btn {
     width: 100%;
+  }
+
+  .hero .social-links {
+    margin-top: 22px;
   }
 
   .code-content {
@@ -1665,15 +1682,26 @@ footer p {
     line-height: 2;
   }
 
+  .hero-card {
+    width: 100%;
+    max-width: 100%;
+  }
 
-  /* SECTIONS */
+  .scroll-down {
+    display: none;
+  }
+
+
+  /* =========================
+     SECTIONS
+  ========================= */
 
   .section {
-    padding: 80px 20px;
+    padding: 65px 20px;
   }
 
   .section-heading {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .section-heading p {
@@ -1691,7 +1719,9 @@ footer p {
   }
 
 
-  /* ABOUT */
+  /* =========================
+     ABOUT
+  ========================= */
 
   .about-image img {
     width: 220px;
@@ -1703,7 +1733,9 @@ footer p {
   }
 
 
-  /* SKILLS */
+  /* =========================
+     SKILLS
+  ========================= */
 
   .skills-grid {
     grid-template-columns: 1fr;
@@ -1714,7 +1746,9 @@ footer p {
   }
 
 
-  /* PROJECTS */
+  /* =========================
+     PROJECTS
+  ========================= */
 
   .projects-grid {
     grid-template-columns: 1fr;
@@ -1735,7 +1769,9 @@ footer p {
   }
 
 
-  /* EXPERIENCE */
+  /* =========================
+     EXPERIENCE
+  ========================= */
 
   .experience-card {
     padding: 24px 20px;
@@ -1811,7 +1847,9 @@ footer p {
   }
 
 
-  /* CERTIFICATIONS */
+  /* =========================
+     CERTIFICATIONS
+  ========================= */
 
   .cert-card {
     padding: 25px 20px;
@@ -1826,7 +1864,9 @@ footer p {
   }
 
 
-  /* EDUCATION */
+  /* =========================
+     EDUCATION
+  ========================= */
 
   .education-card {
     padding: 25px 20px;
@@ -1841,7 +1881,9 @@ footer p {
   }
 
 
-  /* CONTACT */
+  /* =========================
+     CONTACT
+  ========================= */
 
   .contact-content {
     gap: 35px;
@@ -1906,12 +1948,22 @@ footer p {
 
 @media (max-width: 380px) {
 
+  .hero {
+    padding-top: 95px;
+    padding-bottom: 45px;
+    gap: 35px;
+  }
+
   .hero h1 {
     font-size: 36px;
   }
 
   .hero h2 {
     font-size: 19px;
+  }
+
+  .section {
+    padding: 55px 18px;
   }
 
   .section-heading h2 {
@@ -1926,3 +1978,4 @@ footer p {
     font-size: 10px;
   }
 }
+
