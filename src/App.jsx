@@ -48,7 +48,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/contact",
+        "https://chanthini-portfolio.onrender.com/api/contact",
         formData,
       );
 
