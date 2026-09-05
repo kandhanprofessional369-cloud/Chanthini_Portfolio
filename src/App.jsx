@@ -520,35 +520,97 @@ function App() {
         </div>
       </section>
 
+     
       {/* =========================
-          WORK EXPERIENCE
-      ========================= */}
-      <section id="experience" className="section">
-        <div className="section-heading">
-          <p>PROFESSIONAL EXPERIENCE</p>
-          <h2>Work Experience</h2>
-        </div>
+    WORK EXPERIENCE
+========================= */}
+<section id="experience" className="section">
+  <div className="section-heading">
+    <p>PROFESSIONAL EXPERIENCE</p>
+    <h2>Work Experience</h2>
+    <span className="section-subtitle">
+      My professional experience in research and analysis.
+    </span>
+  </div>
 
-        <div className="cert-card experience-card">
-          <h3>Patent Analyst</h3>
+  <div className="experience-card">
 
-          <p>
-            <strong>Molecular Connections</strong> • Coimbatore
-          </p>
+    <div className="experience-header">
 
-          <span>March 2024 – July 2026</span>
+      <div className="experience-icon">
+        💼
+      </div>
 
-          <p className="cert-skills">
-            Conducted Patentability, Freedom-to-Operate (FTO), Invalidity,
-            Quick, and Patent Landscape searches.
-          </p>
+      <div className="experience-title">
+        <h3>Patent Analyst</h3>
 
-          <p className="cert-skills">
-            Analyzed technical and patent information while maintaining research
-            accuracy and delivering structured outputs within defined timelines.
-          </p>
-        </div>
-      </section>
+        <p>
+          <strong>Molecular Connections</strong>
+          <span> • </span>
+          Coimbatore
+        </p>
+
+        
+      </div>
+
+      <div className="experience-date">
+        March 2024 – July 2026
+      </div>
+
+    </div>
+
+    <div className="experience-divider"></div>
+
+    <div className="experience-body">
+
+      <ul className="experience-list">
+
+        <li>
+          Conducted Patentability, Freedom-to-Operate (FTO),
+          Invalidity, Quick, and Patent Landscape searches.
+        </li>
+
+        <li>
+          Analyzed technical and patent information while
+          maintaining research accuracy and relevance.
+        </li>
+
+        <li>
+          Delivered structured outputs within defined timelines
+          to support research requirements.
+        </li>
+
+        <li>
+          Managed multiple research assignments while maintaining
+          quality and meeting project deadlines.
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div className="experience-divider"></div>
+
+    <div className="experience-skills">
+
+      <h4>Key Skills</h4>
+
+      <div className="experience-tags">
+        <span>Patent Research</span>
+        <span>FTO</span>
+        <span>Invalidity Search</span>
+        <span>Patentability Search</span>
+        <span>Patent Landscape</span>
+        <span>Research & Analysis</span>
+        <span>Technical Analysis</span>
+        <span>Documentation</span>
+        <span>Time Management</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* =========================
           CERTIFICATIONS
@@ -656,7 +718,7 @@ function App() {
             <strong>Avinashilingam University, Tamil Nadu</strong>
           </p>
 
-          <span>2019 – 2023</span>
+          <span  className="education-year">2019 – 2023</span>
         </div>
       </section>
 
