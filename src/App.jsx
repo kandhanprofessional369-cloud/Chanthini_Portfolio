@@ -157,7 +157,7 @@ function App() {
             </a>
 
             <a
-              href="/Chanthini_Mai_TV_Updated_Resume.pdf"
+              href="/Chanthini_Mai_TV_Resume 15.09.2026.pdf"
               download
               className="btn secondary-btn"
             >
